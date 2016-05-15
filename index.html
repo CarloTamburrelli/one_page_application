@@ -1,0 +1,35 @@
+<html ng-app="scotchApp">
+  <head>
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+   <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/bower_components/angular-route/angular-route.js"></script>
+  <script src="js/module1.js"></script>
+  </head>
+  <body ng-controller="mainController">
+   <nav class="navbar navbar-default">
+      <div class="navbar-header">
+      <a class="navbar-brand" href="/#/">Home</a>
+    </div>
+       
+       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+           <ul class="nav navbar-nav navbar-right">
+        <li><a href="/#/about">About</a></li>
+        <li><a href="/#/contact">Contact</a></li>
+           </ul>
+           
+       </div>
+
+      </nav>
+    <div id="main">
+
+        <!-- angular templating -->
+        <!-- this is where content will be injected -->
+        <div ng-view></div>
+
+    </div>
+      
+      
+  </body>
+</html>

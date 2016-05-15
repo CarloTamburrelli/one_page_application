@@ -1,0 +1,27 @@
+{
+  "name": "one",
+  "version": "1.0.0",
+  "authors": [
+    "Eleclare <kerokaznu2@gmail.com>"
+  ],
+  "description": "An one page application",
+  "main": "index.html",
+  "keywords": [
+    "angularjs",
+    "one",
+    "page"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.5",
+    "angular-route": "^1.5.5"
+  }
+}

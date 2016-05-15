@@ -1,0 +1,23 @@
+{
+  "name": "one",
+  "version": "1.0.0",
+  "description": "mmm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarloTamburrelli/one_page_application.git"
+  },
+  "author": "Carlo Tamburrelli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarloTamburrelli/one_page_application/issues"
+  },
+  "homepage": "https://github.com/CarloTamburrelli/one_page_application#readme",
+  "devDependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4"
+  }
+}
