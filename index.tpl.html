@@ -11,11 +11,11 @@
    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
    <!-- endbower -->   
       
-  <script src="js/module1/index.js"></script>
-  <script src="js/module1/controllers/richieste.js"></script>
+  <!-- include: "type": "js", "files": "js/**/*.js", "ordering": "top-down"  -->
 
   </head>
-  <body>
+  <body ng-controller="mano">
+      {{qua}}
       <nav class="navbar navbar-default">
       <div class="navbar-header">
       <a class="navbar-brand" ui-sref="index">Elephant's home</a>
