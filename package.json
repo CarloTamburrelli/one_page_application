@@ -23,5 +23,8 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-include-source": "^0.7.1",
     "grunt-wiredep": "^3.0.1"
+  },
+  "dependencies": {
+    "mongoose": "^4.4.17"
   }
 }

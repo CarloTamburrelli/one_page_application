@@ -1,6 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-
+var user_db = require('./moduli/mongoose/user');
 var app = express();
 
 app.use(express.static('.'));
@@ -19,12 +19,20 @@ app.get('/', function(req, res) {
 
 
 app.post("/login_result",function (req,res){
-    var user =  {
-        "number" : req.body.number,
-        "password" : req.body.password
-    };
-   console.log(user);
-    res.send(user);
+    
+    var user_find =  {
+                number : req.body.number,
+                password : req.body.password
+            };
+        
+user_db.findOne(user_find, function(err, users) {
+  if (err) throw err;
+         if(users){
+             res.send({ "answer" : "1"});
+         }else {
+             res.send({ "answer" : "0"})
+         }
+    });  
 });
 
 
