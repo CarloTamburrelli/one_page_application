@@ -1,2 +1,4 @@
 # On page application
-An one page application with angular and bootstrap
+An one page application with MEAN stack
+
+npm start for run
