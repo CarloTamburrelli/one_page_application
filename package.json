@@ -4,6 +4,7 @@
   "description": "mmm",
   "main": "server.js",
   "scripts": {
+    "start" : "grunt default && node server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,6 +26,9 @@
     "grunt-wiredep": "^3.0.1"
   },
   "dependencies": {
-    "mongoose": "^4.4.17"
+    "express-session": "^1.13.0",
+    "mongoose": "^4.4.17",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
   }
 }

@@ -2,6 +2,7 @@
   <head>
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/angular-xeditable/dist/css/xeditable.css" />
   <!-- endbower -->
       
    <!-- bower:js -->
@@ -9,13 +10,17 @@
    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
    <script src="bower_components/angular/angular.js"></script>
    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+   <script src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>
    <!-- endbower -->   
       
   <script src="js/module1/index.js"></script>
+  <script src="js/module1/controllers/contatti.js"></script>
   <script src="js/module1/controllers/richieste.js"></script>
+  <script src="js/module1/service/generali.js"></script>
 
   </head>
-  <body>
+  <body ng-controller="richieste">
+      {{qua}}
       <nav class="navbar navbar-default">
       <div class="navbar-header">
       <a class="navbar-brand" ui-sref="index">Elephant's home</a>
@@ -23,8 +28,16 @@
        
        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
            <ul class="nav navbar-nav navbar-right">
-        <li><a ui-sref="login">Login</a></li>
-        <li><a ui-sref="signup">Sign in</a></li>
+        <li><a ui-sref="login" ng-show="user.error">Login</a></li>
+        <li><a ui-sref="signup" ng-show="user.error">Sign in</a></li>
+         <li class="dropdown" ng-show="!user.error">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{user.number}} <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+        <li><a ui-sref="profile">Profile</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#" ng-click="logout()">Logout</a></li>
+          </ul>
+        </li>
            </ul>
            
        </div>
